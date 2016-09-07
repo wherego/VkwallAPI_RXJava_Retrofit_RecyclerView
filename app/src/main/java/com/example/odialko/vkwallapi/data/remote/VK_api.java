@@ -15,7 +15,7 @@ public interface VK_api {
 
     String vkUrlApi = "https://api.vk.com/method/";
 
-    @GET("wall.get?domain=pro_misto&count=10&v=5.53")
+    @GET("wall.get?domain=pro_misto&count=100&v=5.53")
     Call<VKwall> getVkwall();
 
     class Factory {
