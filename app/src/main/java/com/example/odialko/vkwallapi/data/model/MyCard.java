@@ -9,23 +9,14 @@ public class MyCard {
 
     private String mainText;
 //    private String title;
-    private ArrayList<String> url;
     private String url2;
 
     public void setMainText(String mainText) {
         this.mainText = mainText;
     }
 
-    public void setUrl(ArrayList<String> url) {
-        this.url = url;
-    }
-
     public String getMainText() {
         return mainText;
-    }
-
-    public ArrayList<String> getUrl() {
-        return url;
     }
 
     public String getUrl2() {

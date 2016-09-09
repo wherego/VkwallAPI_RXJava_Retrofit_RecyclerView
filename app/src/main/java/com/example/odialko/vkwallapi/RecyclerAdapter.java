@@ -11,7 +11,6 @@ import com.example.odialko.vkwallapi.data.model.MyCard;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Odialko on 05.09.2016.
@@ -25,13 +24,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         // наш пункт состоит только из одного TextView
         public TextView mTextView;
         public ImageView img;
-
         public ViewHolder(View v) {
             super(v);
             mTextView = (TextView) v.findViewById(R.id.tv_recycler_item);
             img = (ImageView) v.findViewById(R.id.img);
         }
-
     }
 
     // Создает новые views (вызывается layout manager-ом)
@@ -54,22 +51,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         .load(aList.get(position).getUrl2()) //ссылка
                         .resize(640, 480)
                         .into(holder.img);
-
-//        for (String key : aList.get(position).getUrl()) {
-//            try {
-//                Picasso.with(holder.img.getContext())
-//                        .load(key) //ссылка
-//                        .resize(1024, 780)
-//                        .onlyScaleDown()
-//                        .centerInside()
-//                        .into(holder.img);
-//            }catch (Exception e){
-//                e.printStackTrace();
-//            }
-//        }
-
-
-
         }
 
     // Возвращает размер данных (вызывается layout manager-ом)
@@ -82,5 +63,4 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         this.aList = aList;
         notifyDataSetChanged();
     }
-
 }
